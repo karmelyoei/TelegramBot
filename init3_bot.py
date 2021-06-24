@@ -53,7 +53,7 @@ async def handler(event):
         if _foundemoji:
             print('found emoji in string',response)
             await conv.send_message('thanks!')
-            break # break out of white loop
+            break # break out of while loop
         else:
           await conv.send_message(f'Are you sure this "{response.message}" is your emoji?', buttons=[ [Button.inline('yes'), Button.inline('no')] ] )
           print('event2',event)
